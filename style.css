@@ -122,94 +122,152 @@ img { max-width: 100%; height: auto; display: block; }
 .program-card h4.script-title { font-family:"Great Vibes",cursive; font-size:2rem; margin:.2rem 0 .6rem; }
 .program-text { margin:.25rem 0 1rem; line-height:1.5; }
 
-/* ============ TIMELINE FIX (reemplaza reglas previas) ============ */
-/* Timeline con línea central dorada + grid de 3 columnas */
+/* --- 1. ESTILOS GENERALES (Van primero) --- */
 .timeline {
-  position: relative;
-  padding: 1.2rem 0;
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-/* Línea central detrás de los items */
-.timeline-line {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: var(--gold);
-  transform: translateX(-50%);
-  z-index: 1; /* detrás de los items */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #a1887f;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* Cada item es una rejilla de 3 columnas: texto | icono | texto */
 .timeline-item {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 80px 1fr; /* texto | icono | texto */
-  align-items: center; /* <-- centrar verticalmente para que el icono se alinee con el texto */
-  gap: .8rem;
-  margin: 1.1rem 0;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .5s ease, transform .5s ease;
-  z-index: 2; /* por encima de la línea */
+    position: relative;
+    margin-bottom: 40px;
 }
 
-/* mostrando item */
-.timeline-item.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Icono centrado sobre la línea, con mayor tamaño para mejor visibilidad */
-.timeline-icon {
-  grid-column: 2;
-  justify-self: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: 3px solid var(--gold);
-  background: #fff;
-  display: grid;
-  place-items: center;
-  z-index: 3; /* por encima de todo */
-  box-shadow: 0 2px 6px rgba(0,0,0,.06);
-}
-
-/* Icon SVG tamaño cómodo */
-.timeline-icon svg { width: 22px; height: 22px; color: #333; }
-
-/* Contenido responsivo y con ancho controlado para no solaparse con la línea */
 .timeline-content {
-  max-width: 340px;
-  width: 100%;
-  align-self: center; /* asegurar centrado vertical del bloque de texto */
+    padding: 10px;
 }
 
-/* Alineación explícita para versiones izquierda/derecha */
-.timeline-item.left  .timeline-content {
-  grid-column: 1;
-  text-align: right;
-  padding-right: 12px;
-  justify-self: end;
-  align-self: center; /* refuerzo para centrar verticalmente */
-}
-.timeline-item.right .timeline-content {
-  grid-column: 3;
-  text-align: left;
-  padding-left: 12px;
-  justify-self: start;
-  align-self: center; /* refuerzo para centrar verticalmente */
+.timeline-content .time {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #5d4037;
+    margin-bottom: 5px;
 }
 
-.timeline-content strong { font-family:"Montserrat",sans-serif; font-weight:700; display:block; margin-bottom:.25rem; }
-.timeline-content p { color: var(--muted); margin: 0; }
+.timeline-content .description {
+    font-size: 0.95rem;
+    color: #795548;
+    margin: 0;
+}
 
-/* Nota programa */
-.program-note{
-  background:#6b6b6b; color:#fff; text-align:center;
-  padding:1.1rem; border-radius:10px; margin-top:2rem;
-  font-style:italic; font-size:.95rem;
+.timeline-icon {
+    position: absolute;
+    top: 10px; /* Alineación superior por defecto para escritorio */
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #a1887f;
+    border-radius: 50%;
+    background-color: #fdfaf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+/* --- 2. ESTILOS DE ESCRITORIO (Alternados) --- */
+
+/* Items IMPARES (Izquierda) */
+.timeline-item:nth-child(odd) {
+    width: 50%;
+    left: 0;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    text-align: right;
+    padding-right: 65px; 
+}
+
+.timeline-item:nth-child(odd) .timeline-icon {
+    right: -22px; 
+}
+
+/* Items PARES (Derecha) */
+.timeline-item:nth-child(even) {
+    width: 50%;
+    left: 50%;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    text-align: left;
+    padding-left: 65px;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -22px;
+}
+
+/* --- VISTA MÓVIL (Responsivo) --- */
+/* ESTO DEBE IR SIEMPRE AL FINAL DEL ARCHIVO */
+
+@media (max-width: 700px) {
+    /* 1. Ajuste de la línea vertical */
+    .timeline {
+        width: 100%;
+        padding-left: 40px;
+        box-sizing: border-box;
+    }
+    
+    .timeline::before {
+        left: 20px !important;
+        transform: translateX(0) !important;
+    }
+
+    /* 2. Ajuste de los items */
+    .timeline-item {
+        width: 100% !important;
+        left: 0 !important;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    /* 3. Ajuste de los íconos */
+    .timeline-icon {
+        left: 0 !important;
+        right: auto !important;
+        top: 0 !important;
+        transform: translateX(-50%) !important;
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    /* 4. Ajuste del contenido */
+    .timeline-content {
+        width: 100% !important;
+        padding: 0 0 0 30px !important;
+        text-align: left !important;
+        position: relative;
+    }
+    
+    .timeline-content .time {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+    
+    .timeline-content .description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Eliminar el margen inferior del último elemento */
+    .timeline-item:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /* ============ TARJETAS: VESTIMENTA / REGALO ============ */
@@ -309,5 +367,6 @@ img { max-width: 100%; height: auto; display: block; }
     margin: 1.2rem 0;
   }
   .timeline-icon{ grid-column: 1; margin-bottom: .5rem; width: 44px; height: 44px; }
-  .timeline-content{ grid-column: 1; max-width: 520px; padding: 0; }
+  .timeline-content{ grid-column: 1; max-width: 520px; padding: 0; text-align: center; }
+  .timeline-content strong { text-align: center; }
 }
