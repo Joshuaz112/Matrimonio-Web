@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>¡Nos Casamos! — Manuel & Jhoni</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+
+  <meta name="description" content="Invitación de boda de Manuel & Jhoni — 27 de diciembre, 2025">
+</head>
+<body>
+
+  <!-- 🔊 Spotify flotante -->
+  <div class="spotify-bar" id="spotifyBar">
+    <div class="spotify-player">
+      <div class="spotify-header">
+        <p class="spotify-text">🎶 Dale play para escuchar nuestra canción</p>
+        <button id="toggleSpotify" class="spotify-toggle" title="Ocultar barra">×</button>
+      </div>
+      <iframe
+        src="https://open.spotify.com/embed/track/0tgVpDi06FyKpA1z0VMD4v?utm_source=generator"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header container">
+    <div class="newspaper">
+      <span class="newspaper__badge">Las Noticias de última hora</span>
+      <h1 class="headline">¡NOS CASAMOS!</h1>
+      <div class="divider hearts">
+        <span>♥</span><span>27 de diciembre, 2025</span><span>♥</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <img class="hero__img"
+      src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1600&auto=format&fit=crop"
+      alt="Foto de los novios" />
+  </section>
+
+  <!-- INTRO -->
+  <section class="container intro">
+    <h2 class="names">Manuel & Jhoni</h2>
+    <p class="script">¡Nos vamos a casar!</p>
+    <p class="lead">
+      Con gran alegría, nos complace anunciar que hemos decidido unir nuestras vidas en matrimonio. 
+      Este día especial es el comienzo de una nueva etapa, con historias, recuerdos y cariño que queremos compartir junto a ustedes.
+    </p>
+
+    <div class="banner">CON LA BENDICIÓN DE DIOS Y NUESTROS PADRES</div>
+
+    <div class="grid-2 parents">
+      <div class="parents__col">
+        <h4>Familia de la Novia</h4>
+        <p>Ana López García<br />Octavio Alvarado & Tamara</p>
+      </div>
+      <div class="parents__col">
+        <h4>Familia del Novio</h4>
+        <p>Martín Pérez Sánchez<br />Michell Gómez & Tania</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTO SECUNDARIA -->
+  <section class="container mid-photo reveal">
+  <h3 class="section-title">¡LLEGA LA BODA MÁS ESPERADA!</h3>
+  <img
+    class="mid-photo__img"
+    src="https://images.unsplash.com/photo-1631225893179-4d6e349189c2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1200"
+    alt="Pareja besándose frente al sol"
+  />
+</section>
+
+
+  <!-- 💒 PROGRAMA DE BODA -->
+  <section class="container program">
+    <h3 class="section-title script">Programa de boda</h3>
+
+    <div class="program-wrapper">
+      <!-- Izquierda: lugares -->
+      <div class="program-left reveal">
+        <div class="card soft program-card">
+          <h4 class="script-title">Ceremonia</h4>
+          <p class="program-text">
+            Templo Parroquial San Pío<br />Baquedano 309, Ancud
+          </p>
+          <a href="#" target="_blank" class="btn btn--map">Ubicación</a>
+        </div>
+
+        <div class="card soft program-card">
+          <h4 class="script-title">Recepción</h4>
+          <p class="program-text">Panamericana Hotel Ancud</p>
+          <a href="#" target="_blank" class="btn btn--map">Ubicación</a>
+        </div>
+      </div>
+
+      <!-- Derecha: línea de tiempo con línea central -->
+      <div class="timeline reveal">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item left">
+          <div class="timeline-icon"><svg><use href="#church"></use></svg></div>
+          <div class="timeline-content">
+            <strong>16:00 – 17:00</strong>
+            <p>Inicia la ceremonia religiosa o civil</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-icon"><svg><use href="#camera"></use></svg></div>
+          <div class="timeline-content">
+            <strong>17:00 – 18:00</strong>
+            <p>Sesión de fotos de los novios</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-icon"><svg><use href="#wine"></use></svg></div>
+          <div class="timeline-content">
+            <strong>18:00 – 18:30</strong>
+            <p>Recepción y brindis familiar</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-icon"><svg><use href="#dinner"></use></svg></div>
+          <div class="timeline-content">
+            <strong>19:00 – 20:00</strong>
+            <p>Cena y banquete</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-icon"><svg><use href="#rings"></use></svg></div>
+          <div class="timeline-content">
+            <strong>19:30 – 20:30</strong>
+            <p>Primer baile de los novios</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-icon"><svg><use href="#music"></use></svg></div>
+          <div class="timeline-content">
+            <strong>21:00 – 23:00</strong>
+            <p>Inicia la fiesta, música y diversión</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-icon"><svg><use href="#cake"></use></svg></div>
+          <div class="timeline-content">
+            <strong>23:00 – 23:30</strong>
+            <p>Partida de pastel, ramo y liga</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-icon"><svg><use href="#heart"></use></svg></div>
+          <div class="timeline-content">
+            <strong>23:30 – 24:00</strong>
+            <p>Termina la celebración de la boda</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-note">
+      “Amamos a los niños, pero creemos que esta noche se merecen disfrutar solos como pareja; por eso esta ocasión será solo para adultos.”
+    </div>
+  </section>
+
+  <!-- 🎁 / 👗 TARJETAS: Vestimenta + Regalos -->
+  <section class="container two-cards">
+    <!-- Vestimenta -->
+    <div class="card dress-card reveal">
+      <div class="card-header">
+        <span></span>
+        <h4 class="script">Código de Vestimenta</h4>
+        <span></span>
+      </div>
+
+      <p class="subtitle">Elegante y Cómodo</p>
+
+      <div class="card-icons">
+        <svg class="icon-outline" viewBox="0 0 64 64" aria-label="Vestido">
+          <path d="M16 58c-2 0-4-1-4-3s3-15 9-23l-3-5c-1-2 1-4 3-4l6 1 4-8 4 8 6-1c2 0 4 2 3 4l-3 5c6 8 9 21 9 23s-2 3-4 3H16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="icon-outline" viewBox="0 0 64 64" aria-label="Traje">
+          <path d="M24 58V28l8-8 8 8v30M20 10l4 18m20-18-4 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="dress-details">
+        <div><strong>Ellas:</strong> Vestido largo</div>
+        <div><strong>Ellos:</strong> Traje y corbata</div>
+      </div>
+
+      <p class="note"><em>(Se reserva el color blanco para la Novia)</em></p>
+    </div>
+
+    <!-- Regalos -->
+    <div class="card gift-card reveal">
+      <div class="card-header">
+        <span></span>
+        <h4 class="script">Sugerencia de Regalo</h4>
+        <span></span>
+      </div>
+
+      <div class="card-icons">
+        <!-- Caja de regalo minimalista -->
+        <svg class="icon-outline" viewBox="0 0 64 64" aria-label="Regalo">
+          <path d="M8 28h48v28H8zM8 20h48v8H8zM24 20c-4 0-6-2-6-5s2-5 5-5 7 5 7 10M40 20c4 0 6-2 6-5s-2-5-5-5-7 5-7 10M32 20v36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <p class="gift-phrase">
+        Tu presencia es el mejor regalo, pero si deseas tener un detalle con nosotros, te dejamos nuestra lista:
+      </p>
+
+      <a class="btn" href="#" target="_blank" rel="noopener">Ver lista de regalos</a>
+    </div>
+  </section>
+
+  <!-- ⏳ COUNTDOWN -->
+  <section class="container countdown">
+    <h3 class="section-title">Faltan</h3>
+    <div class="countdown__grid" id="countdown">
+      <div class="time"><span class="num" id="d">00</span><span class="label">DÍAS</span></div>
+      <div class="time"><span class="num" id="h">00</span><span class="label">HORAS</span></div>
+      <div class="time"><span class="num" id="m">00</span><span class="label">MINUTOS</span></div>
+      <div class="time"><span class="num" id="s">00</span><span class="label">SEGUNDOS</span></div>
+    </div>
+  </section>
+
+  <!-- 💌 RSVP -->
+  <section class="container rsvp">
+    <p class="quote">“Es un honor invitarlos a ser parte de este día tan especial para nosotros.”</p>
+    <div class="rsvp__grid">
+      <div class="rsvp__col">
+        <h4>Novio</h4>
+        <a class="btn" href="https://wa.me/0000000000?text=Confirmo%20mi%20asistencia" target="_blank" rel="noopener">Confirmación</a>
+      </div>
+      <div class="rsvp__col">
+        <h4>Novia</h4>
+        <a class="btn btn--alt" href="https://wa.me/0000000000?text=Confirmo%20mi%20asistencia" target="_blank" rel="noopener">Confirmación</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRMAS -->
+  <section class="container signature">
+    <div class="monogram">M & J</div>
+    <p class="tiny">¡TE ESPERAMOS!</p>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      © 2025 Manuel & Jhoni — Hecho con amor 💍
+    </div>
+  </footer>
+
+  <!-- SVG ICONS (sprite) -->
+  <svg style="display:none;">
+    <!-- Programa (outline minimalista) -->
+    <symbol id="church" viewBox="0 0 24 24"><path d="M12 3l3 3v3h2v4h-2v8h-4v-5H9v5H5v-8H3V9h2V6l3-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="camera" viewBox="0 0 24 24"><path d="M4 7h4l2-2h4l2 2h4v12H4zM12 11.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="wine" viewBox="0 0 24 24"><path d="M7 5h10c0 4-2 7-5 7S7 9 7 5zm5 7v5m-3 2h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="dinner" viewBox="0 0 24 24"><path d="M4 4h2v7m3-7h2v7m3-7h2v7M5 14a7 7 0 1014 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="rings" viewBox="0 0 24 24"><path d="M9 15a5 5 0 100-10 5 5 0 000 10zm6-2a4 4 0 110 8 4 4 0 010-8zM14 7l3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="music" viewBox="0 0 24 24"><path d="M12 4v10a3 3 0 11-2 2V8h8V4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="cake" viewBox="0 0 24 24"><path d="M12 3v3M5 10h14v4H5zm-1 4h16v6H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M12 20s-8-5.5-8-10a4.5 4.5 0 018-3 4.5 4.5 0 018 3c0 4.5-8 10-8 10z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
